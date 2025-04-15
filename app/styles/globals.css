@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Font Circular */
+@font-face {
+  font-family: 'CircularStd';
+  src: local('CircularStd Book'), local('CircularStd-Book'),
+       url('/fonts/CircularStd-Book.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CircularStd';
+  src: local('CircularStd Bold'), local('CircularStd-Bold'),
+       url('/fonts/CircularStd-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  @apply bg-spotify-black text-spotify-white;
+  font-family: 'Circular', sans-serif;
+}
+
+.spotify-button {
+  @apply bg-[#1DB954] text-white font-bold py-2 px-4 rounded-full hover:bg-[#1ed760] transition-colors;
+}
+
+.spotify-card {
+  @apply bg-[#282828] p-4 rounded-md hover:bg-[#3E3E3E] transition-all duration-200;
+}
+
+.text-truncate {
+  @apply overflow-hidden whitespace-nowrap text-ellipsis;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #121212;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #535353;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7f7f7f;
+} 
